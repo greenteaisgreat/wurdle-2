@@ -14,7 +14,8 @@ function Guess({ value, answer }) {
           <span
             key={`${num}-${Math.random()}`}
             className={
-              //generates a color on the correctness of a letter
+              //generates a colored tile, based on the correctness
+              //of a letter, or the regular styling if no guess has been logged
               checkGuess(value, answer)
                 ? `cell ${checkGuess(value, answer)[i].status}`
                 : "cell"
