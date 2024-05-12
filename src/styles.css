@@ -166,13 +166,6 @@ h1 {
 }
 
 .guess-input-wrapper input:active {
-  display: block;
-  width: 100%;
-  font-size: 2rem;
-  border: 2px solid var(--color-gray-300);
-  border-radius: 4px;
-  padding: 8px 16px;
-  outline-offset: 4px;
   color: red;
 }
 

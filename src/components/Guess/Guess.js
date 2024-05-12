@@ -1,7 +1,6 @@
 import React from "react";
 //helper function to generate an array of a given length
 import { range } from "../../utils";
-//another helper to determine a letter's tile color
 import { checkGuess } from "../../game-helpers";
 
 function Guess({ value, answer }) {

@@ -14,7 +14,10 @@ function EndGameBanner({ hasWon, answer, turns }) {
                 ON THE LAST GUESS!
               </strong>
             ) : (
-              <strong style={{ color: "goldenrod" }}> {turns} guesses.</strong>
+              <strong style={{ color: "goldenrod" }}>
+                {" "}
+                in {turns} guesses.
+              </strong>
             )}
           </p>
         </div>
