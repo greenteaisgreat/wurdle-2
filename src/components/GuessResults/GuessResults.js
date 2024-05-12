@@ -8,7 +8,7 @@ function GuessResults({ guesses, answer }) {
   return (
     <div className="guess-results">
       {/* Generates the game's grid */}
-      {range(NUM_OF_GUESSES_ALLOWED).map((num) => (
+      {range(NUM_OF_GUESSES_ALLOWED).map((num, i) => (
         <Guess
           //Checks for a value; if none, an empty string populates the value
           value={guesses ? guesses[num] : ""}
