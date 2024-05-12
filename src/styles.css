@@ -9,7 +9,7 @@ html {
 
   --color-success: hsl(150deg 70% 30%);
   --color-warning: hsl(50deg 100% 30%);
-  --color-error: hsl(0deg 70% 45%);
+  --color-error: hsl(0, 63%, 55%);
   --color-gray-100: hsl(0deg 0% 10%);
   --color-gray-300: hsl(0deg 0% 25%);
   --color-gray-500: hsl(0deg 0% 50%);
@@ -102,7 +102,7 @@ h1 {
   display: grid;
   place-content: center;
   aspect-ratio: 1 / 1;
-  border: 2px solid var(--color-gray-700);
+  border: 3px solid var(--color-gray-500);
   border-radius: var(--radius);
   font-size: 2rem;
 }
@@ -151,6 +151,10 @@ h1 {
   font-size: 1.25rem;
 }
 
+::placeholder {
+  font-size: small;
+}
+
 .guess-input-wrapper input {
   display: block;
   width: 100%;
@@ -161,11 +165,22 @@ h1 {
   outline-offset: 4px;
 }
 
+.guess-input-wrapper input:active {
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  border: 2px solid var(--color-gray-300);
+  border-radius: 4px;
+  padding: 8px 16px;
+  outline-offset: 4px;
+  color: red;
+}
+
 .banner {
   position: fixed;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 15;
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
@@ -173,6 +188,7 @@ h1 {
   text-align: center;
   animation: slideUp 750ms cubic-bezier(0, 0.72, 0.24, 1.02);
   border-radius: 4px 4px 0px 0px;
+  border: 2px solid black;
   will-change: transform;
 }
 
