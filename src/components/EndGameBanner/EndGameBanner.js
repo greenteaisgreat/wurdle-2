@@ -11,12 +11,20 @@ function EndGameBanner({ turns, gameStatus, answer }) {
             {turns === NUM_OF_GUESSES_ALLOWED ? (
               <strong style={{ color: "goldenrod" }}>
                 {" "}
-                ON THE LAST GUESS!
+                ON THE LAST GUESS! 🎉
+              </strong>
+            ) : turns === 1 ? (
+              <strong style={{ color: "goldenrod" }}>
+                {" "}
+                in {turns} guess!{" "}
+                <span style={{ color: "#ff808b", fontStyle: "italic" }}>
+                  HECK YEAH! <span style={{ fontStyle: "normal" }}>🎊</span>
+                </span>
               </strong>
             ) : (
               <strong style={{ color: "goldenrod" }}>
                 {" "}
-                in {turns} guesses.
+                in {turns} guesses!
               </strong>
             )}
           </p>
