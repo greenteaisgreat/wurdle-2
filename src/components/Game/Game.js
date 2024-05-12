@@ -9,7 +9,7 @@ import { NUM_OF_GUESSES_ALLOWED } from "../../constants";
 // Pick a random word on every pageload.
 const answer = sample(WORDS);
 // To make debugging easier, we'll log the solution in the console.
-console.info({ answer });
+console.info({ answer }, "I see you, too, are a person of culture 😌");
 
 function Game() {
   //statuses include running / won / lost
