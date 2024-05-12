@@ -20,6 +20,7 @@ function Game() {
     nextGuesses = [...guesses, tentativeGuess];
     setGuesses(nextGuesses);
 
+    //game logic to determine a win or lose scenario
     if (tentativeGuess.toUpperCase() === answer) {
       setGameStatus("won");
     } else if (nextGuesses.length >= NUM_OF_GUESSES_ALLOWED) {
