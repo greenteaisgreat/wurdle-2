@@ -17,7 +17,7 @@ function Game() {
   const [guesses, setGuesses] = React.useState([]);
 
   function handleSubmitGuess(tentativeGuess) {
-    nextGuesses = [...guesses, tentativeGuess];
+    const nextGuesses = [...guesses, tentativeGuess];
     setGuesses(nextGuesses);
 
     //game logic to determine a win or lose scenario
