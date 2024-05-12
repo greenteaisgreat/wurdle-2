@@ -1,10 +1,10 @@
 import React from "react";
 import { NUM_OF_GUESSES_ALLOWED } from "../../constants";
 
-function EndGameBanner({ hasWon, answer, turns }) {
+function EndGameBanner({ turns, gameStatus, answer }) {
   return (
     <>
-      {hasWon ? (
+      {gameStatus === "won" ? (
         <div className="happy banner">
           <p>
             <strong>Congratulations!</strong> Got it
