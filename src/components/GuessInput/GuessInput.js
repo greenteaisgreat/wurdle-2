@@ -14,7 +14,6 @@ function GuessInput({
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log({ tentativeGuess });
     handleSubmitGuess(tentativeGuess);
     setTentativeGuess("");
   }
