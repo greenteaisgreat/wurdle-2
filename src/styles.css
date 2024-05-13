@@ -31,13 +31,24 @@ body {
 }
 
 button {
-  margin: 0;
-  padding: 0;
-  border: none;
-  background: transparent;
+  position: relative;
+  bottom: 12rem;
+  border: 3px solid black;
+  text-align: center;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: antiquewhite;
   cursor: pointer;
-  text-align: left;
-  color: inherit;
+}
+
+button:hover {
+  background-color: bisque;
+}
+
+button:active {
+  background-color: cornflowerblue;
 }
 
 .wrapper {
@@ -49,7 +60,7 @@ button {
 header {
   display: flex;
   height: var(--header-height);
-  border-bottom: 1px solid var(--color-gray-700);
+  border-bottom: 2px solid var(--color-gray-700);
   color: var(--color-gray-300);
 }
 
@@ -155,6 +166,10 @@ h1 {
   font-size: small;
 }
 
+input:focus::placeholder {
+  color: transparent;
+}
+
 .guess-input-wrapper input {
   display: block;
   width: 100%;
@@ -163,6 +178,10 @@ h1 {
   border-radius: 4px;
   padding: 8px 16px;
   outline-offset: 4px;
+}
+
+.guess-input-wrapper input:hover {
+  background-color: azure;
 }
 
 .guess-input-wrapper input:active {
