@@ -16,9 +16,11 @@ function EndGameBanner({ turns, gameStatus, answer }) {
             ) : turns === 1 ? (
               <strong style={{ color: "goldenrod" }}>
                 {" "}
-                in {turns} guess!{" "}
+                in {turns} guess! &nbsp;
+                <span style={{ fontStyle: "normal" }}>🎊</span>{" "}
                 <span style={{ color: "#ff808b", fontStyle: "italic" }}>
-                  HECK YEAH! <span style={{ fontStyle: "normal" }}>🎊</span>
+                  HECK YEAH! &nbsp;
+                  <span style={{ fontStyle: "normal" }}>🎊</span>
                 </span>
               </strong>
             ) : (
