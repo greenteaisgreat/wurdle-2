@@ -1,8 +1,14 @@
 import React from "react";
 import EndGameBanner from "../EndGameBanner";
-import { NUM_OF_GUESSES_ALLOWED } from "../../constants";
+import ResetButton from "../ResetButton";
 
-function GuessInput({ handleSubmitGuess, gameStatus, guesses, answer }) {
+function GuessInput({
+  handleSubmitGuess,
+  gameStatus,
+  guesses,
+  answer,
+  handleRestart,
+}) {
   const [tentativeGuess, setTentativeGuess] = React.useState("");
   const turns = guesses.length;
 
@@ -15,7 +21,11 @@ function GuessInput({ handleSubmitGuess, gameStatus, guesses, answer }) {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="guess-input-wrapper">
+      <form
+        onSubmit={handleSubmit}
+        className="guess-input-wrapper"
+        style={{ textAlign: "center" }}
+      >
         <label htmlFor="guess-input">Enter Guess:</label>
         {gameStatus === "running" ? (
           <input
@@ -32,11 +42,14 @@ function GuessInput({ handleSubmitGuess, gameStatus, guesses, answer }) {
             }}
           ></input>
         ) : (
-          <EndGameBanner
-            turns={turns}
-            gameStatus={gameStatus}
-            answer={answer}
-          />
+          <>
+            <EndGameBanner
+              turns={turns}
+              gameStatus={gameStatus}
+              answer={answer}
+            />
+            <ResetButton handleRestart={handleRestart} />
+          </>
         )}
       </form>
     </>
