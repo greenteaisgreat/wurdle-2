@@ -39,12 +39,12 @@ button {
   padding: 1rem;
   font-size: 20px;
   font-weight: bold;
-  background-color: antiquewhite;
+  background-color: rgb(144, 196, 220);
   cursor: pointer;
 }
 
 button:hover {
-  background-color: bisque;
+  background-color: rgb(164, 236, 253);
 }
 
 button:active {
