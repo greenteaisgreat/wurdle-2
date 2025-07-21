@@ -1,6 +1,5 @@
 import Game from "../Game";
 import Header from "../Header";
-import { Analytics } from "@vercel/analytics/next";
 
 function App() {
   return (
@@ -9,7 +8,6 @@ function App() {
 
       <div className="game-wrapper">
         <Game />
-        <Analytics />
       </div>
     </div>
   );
